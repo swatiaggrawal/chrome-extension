@@ -3,10 +3,14 @@ let myLeads=[]
 const inputEl=document.getElementById("input-el")
 const inputBtn=document.getElementById("input-btn")
 const ulEl=document.getElementById("ul-el")
+
 inputBtn.addEventListener("click",function(){
     myLeads.push(inputEl.value)
     inputEl.value=""
+    myLeads.value=JSON.stringify(myLeads.value)
+    localStorage.setItem("myLeads",)
     renderLeads()
+
 })
 function renderLeads(){
 let listItems=""
